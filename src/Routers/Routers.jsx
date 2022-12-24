@@ -6,6 +6,8 @@ import Vendre from '../pages/Vendre.jsx'
 import Annonce from '../pages/Annonce.jsx'
 import { Routes, Route } from 'react-router-dom'
 import { MyProvider } from '../utils/MyContext.jsx'
+import SignIn from '../pages/SignIn'
+import SignUp from '../pages/SignUp'
 
 const Routers = () => {
     return (
@@ -16,6 +18,9 @@ const Routers = () => {
           <Route path='/Vendre' element={<Vendre/>}></Route>
           <Route path='/Compte' element={<Compte/>}></Route>
           <Route path='/Annonce' element={<Annonce/>}></Route>
+          <Route path='/SignIn' element={<SignIn/>}></Route>
+          <Route path='/SignUp' element={<SignUp/>}></Route>
+
         </Routes>
     </MyProvider>
     );
