@@ -1,47 +1,33 @@
 import React from "react";
-import { Label ,TextInput , Checkbox , Button } from "flowbite-react";
+import Navbar from "../components/Header/NavigationBar";
 
 const SignIn = () => {
   return (
     <div>
-      <form className="flex flex-col gap-3 bg-500 aziz">
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="email2" value="email" />
+      <Navbar bgnavbar={true} />
+      <div className="flex content-center justify-center">
+        <div className="flex flex-col items-center content-center">
+          <p>Connectez-vous pour profiter de toutes les fonctionnalitées</p>
+          <p className="">de notre site</p>
+        </div>
+      </div>
+      <div>
+        <form id=""  className=" w-1/2 mx-auto border mt-5 shadowFormulair" >
+          <h1 className="colorPrimary titleInsc text-center">Connexion</h1>
+          <div className="flex justify-center">
+            <input id="email" type="text" name="email" className="inputform h-9" placeholder="Email"></input>
           </div>
-          <TextInput
-            id="email2"
-            type="email"
-            placeholder="name@gmail.com"
-            required={true}
-            shadow={true}
-          />
-        </div>
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="password2" value="mot de passe" />
+          <div className="flex justify-center">
+            <input type="password" className="inputform h-9"  placeholder="mot de passe" />
           </div>
-          <TextInput
-            id="password2"
-            type="password"
-            required={true}
-            shadow={true}
-          />
-        </div>
-        <div className="flex items-center gap-2">
-          <Checkbox id="agree" />
-          <Label htmlFor="agree">
-            I agree with the{" "}
-            <a
-              href="/forms"
-              className="text-blue-600 hover:underline dark:text-blue-500"
-            >
-              terms and conditions
-            </a>
-          </Label>
-        </div>
-        <Button type="submit" className="amine">Se Connecter</Button>
-      </form>
+          <div className="flex justify-center">
+            <button type="submit" id="btnSubmitinsc" className="">Se connecter</button>
+          </div>
+          <div>
+            <p className="text-center colorPrimary samlltexto">Vous n'avez pas de compte ? <a href="/Signup" className=" font-bold">créer un nouveau compte</a></p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

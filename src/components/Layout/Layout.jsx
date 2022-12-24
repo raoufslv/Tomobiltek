@@ -6,9 +6,9 @@ import Footer from '../Footer/Footer.jsx';
 const Layout = () => {
     return (
         <Fragment>
-            <Header/>
+            {/* <Header/> */}
             <Routers/>
-            <Footer/>
+            {/* <Footer/> */}
         </Fragment>
         
     );

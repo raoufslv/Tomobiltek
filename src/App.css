@@ -1,0 +1,129 @@
+.heighto{
+    height: 21rem;
+}
+
+.heroSection{
+    padding-top: 60px;
+    margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 60px;
+}
+
+.bg-primary-purple{
+    background-color: #45195A;
+}
+
+.colorPrimary{
+    color: #45195A;
+}
+
+.titleInsc{
+    /* add a font family from web */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.heroTitle{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.raduis{
+    border-radius: 20px;
+}
+
+.buttonStart{
+    background-color: #8E2BBE;
+    font-size: 1.2rem;
+    margin: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.buttonStart:hover{
+    background-color: #611F81;
+}
+
+.btnConnect{
+    background-color: #D9D9D9;
+    color: #611F81;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btnConnect:hover{
+    background-color: #611F81;
+    color: #D9D9D9;
+}
+
+.bg-lenear-purple{
+    background: linear-gradient(180deg, #45195A 0%, #942DC7 100%);
+}
+
+.itemsbar{
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.itemsbar:hover{
+    cursor: pointer;
+    color: #942DC7;
+}
+
+.inputform{
+    margin-top: 1.2rem;
+    width: 60%;
+    border: 1.5px solid #611F81;
+    border-radius: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.inputform:hover{
+    border: 1.5px solid #942DC7;
+}
+
+#btnSubmitinsc{
+    background-color: #611F81;
+    color: #D9D9D9;
+    margin-top: 1.2rem;
+    width: 60%;
+    font-size: 1.2rem;
+    border-radius: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#btnSubmitinsc:hover{
+    background-color: #c3bdbd;
+    color: #611F81;
+}
+
+.samlltexto{
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.s-samlltexto{
+    font-size: 0.6rem;
+    margin-top: 0.7rem;
+}
+
+.shadowFormulair{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
