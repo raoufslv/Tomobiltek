@@ -13,6 +13,12 @@
     background-color: #45195A;
 }
 
+#Khayer{
+    /* add popping font from web */
+    font-family: 'Montserrat', sans-serif;
+
+}
+
 .colorPrimary{
     color: #45195A;
 }
@@ -76,6 +82,33 @@
 .itemsbar:hover{
     cursor: pointer;
     color: #942DC7;
+}
+
+#chercheBtn{
+    background-color: #611F81;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 9px;
+}
+
+#btnPublier{
+    background-color: #fff;
+    color: #611F81;
+    font-size: 1.2rem;
+    border-radius: 9px;
+    padding: 1rem;
+    width: 40%;
+
+}
+
+#venderDiv{
+    background-image: url(../public/wallpaper_car.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20rem;
+    width: 80%;
+
 }
 
 .inputform{

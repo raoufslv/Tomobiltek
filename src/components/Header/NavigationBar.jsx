@@ -18,9 +18,9 @@ const NavigationBar = ({ bgnavbar }) => {
         <img src="../../../public/logo.svg" alt="" className=" w-11" />
       </button>
       <div className="flex text-white mt-2">
-        <div className="itemsbar">Home</div>
-        <div className="itemsbar">About us</div>
-        <div className="itemsbar">Our cars</div>
+        <div className="itemsbar" onClick={() => navigate("/")}>Home</div>
+        <div className="itemsbar" onClick={() => navigate("/")}>About us</div>
+        <div className="itemsbar" onClick={() => navigate("/Achat")}>Our cars</div>
       </div>
       <div className="flex gap-4 p-2 pr-3 mb-1">
         <button className="raduis text-purple-700 btnConnect m-1" onClick={() => navigate("/signIn")}>

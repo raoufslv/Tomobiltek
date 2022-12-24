@@ -12,7 +12,7 @@ const SignIn = () => {
         </div>
       </div>
       <div>
-        <form id=""  className=" w-1/2 mx-auto border mt-5 shadowFormulair" >
+        <form id="" action="" method=""  className=" w-1/2 mx-auto border mt-5 shadowFormulair" >
           <h1 className="colorPrimary titleInsc text-center">Connexion</h1>
           <div className="flex justify-center">
             <input id="email" type="text" name="email" className="inputform h-9" placeholder="Email"></input>
