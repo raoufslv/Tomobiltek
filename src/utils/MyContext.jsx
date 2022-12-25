@@ -4,10 +4,10 @@ const MyContext = createContext();
 
 
 export const MyProvider = ({children}) => {
-    const [userName , setUserName] = useState("Raouf sahbi");
+    const [connected, setConnected] = useState(false);
 
     return (
-        <MyContext.Provider value={{userName , setUserName}}>
+        <MyContext.Provider value={{connected , setConnected}}>
             {children}
         </MyContext.Provider>
     );

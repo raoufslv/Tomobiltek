@@ -1,5 +1,34 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    --appearance:textfield; /* Firefox */
+}
+
 .heighto{
     height: 21rem;
+}
+
+#cradcar{
+    background-image: url(../public/RS3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10rem;
+    width: 100%;
+    border-radius: 2rem;
+
+}
+
+.bgTransParent{
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 .heroSection{
@@ -23,6 +52,66 @@
     color: #45195A;
 }
 
+.widtha{
+    width: 70%;
+}
+
+.secondaryColor{
+    color: #611F81;
+}
+
+.mlefto{
+    margin-left: 37rem;
+}
+
+.divProfil{
+    border: 1px solid #611F81;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 1rem;
+    width: 60%;
+}
+
+.profilPic{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn_Estimer{
+    background-color: #611F81;
+    color: #D9D9D9;
+    font-size: 2rem;
+    border-radius: 20px;
+}
+
+#imgAnonce{
+    width: 34rem/* 384px */;
+}
+
+.voirProfil{
+    color: #611F81;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 1.5px solid #611F81;
+    border-radius: 20px;
+    padding: 0.5rem;
+    
+}
+
+.nice_line{
+    background: #611F81;
+    height: 0.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+}
+
 .titleInsc{
     /* add a font family from web */
     font-family: 'Montserrat', sans-serif;
@@ -39,6 +128,20 @@
 
 .raduis{
     border-radius: 20px;
+}
+
+.profilPic2{
+    border: 1px solid #fff;
+    background-color: #c3bdbd;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.familyyy{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .buttonStart{
@@ -109,6 +212,11 @@
     height: 20rem;
     width: 80%;
 
+}
+
+.inputImage{
+    width: 40%;
+    height: 10%;
 }
 
 .inputform{

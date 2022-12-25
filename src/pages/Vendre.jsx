@@ -3,176 +3,119 @@ import { Label } from "flowbite-react";
 import { TextInput } from "flowbite-react";
 import { Checkbox } from "flowbite-react";
 import { Button, Radio } from "flowbite-react";
+import Navbar from "../components/Header/NavigationBar";
+import { useNavigate } from "react-router-dom";
+import MyContext from "../utils/MyContext";
+import axios from "axios";
 
 const Vendre = () => {
+  const navigate = useNavigate();
+  const { connected, setConnected } = React.useContext(MyContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const formData = Object.fromEntries(data.entries());
+    console.log(formData);
+    axios
+      .post("http://localhost:3001/api/v1/annonce", formData)
+      .then((res) => {
+        console.log(res);
+        navigate("/Achat");
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
-    <div className="amine">
-      <form className="flex flex-col gap-4">
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="name" value="Nom" />
+    <div>
+      <Navbar bgnavbar="true" />
+      <div className="flex justify-center">
+        <div className="flex  mx-auto gap-10 shadow shadow-stone-800 raduis">
+          <form className="p-4 pt-3">
+            <div>
+              <h1>Créer votre annonce :</h1>
+              <hr className=" w-24 nice_line mb-0" />
+            </div>
+            <div className="flex flex-col">
+              <input
+                type="text"
+                placeholder="Nom"
+                name=""
+                id=""
+                className="inputform w-52 rounded "
+              />
+              <input
+                type="text"
+                placeholder="Année"
+                name=""
+                id=""
+                className="inputform w-52 rounded mt-2"
+              />
+              <input
+                type="text"
+                placeholder="Kilometrage"
+                name=""
+                id=""
+                className="inputform w-52 rounded mt-2"
+              />
+              <select
+                type="text"
+                name="Carburant"
+                className="inputform  w-52 rounded mt-2"
+              >
+                <option value="">Fuel</option>
+                <option value="petrol">petrol</option>
+                <option value="DSL">DSL</option>
+                <option value="LPG">LPG</option>
+                <option value="CNG">CNG</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Moteur"
+                name=""
+                id=""
+                className="inputform w-52 rounded mt-2"
+              />
+              <input
+                type="text"
+                placeholder="Puissance Max"
+                name=""
+                id=""
+                className="inputform w-52 rounded mt-2"
+              />
+              <input
+                type="text"
+                placeholder="Places"
+                name=""
+                id=""
+                className="inputform w-52 rounded mt-2"
+              />
+              <select
+                type="text"
+                name="main"
+                className="inputform  w-52 rounded mt-2"
+              >
+                <option value="">La main</option>
+                <option value="1">premiere main</option>
+                <option value="2">deuxieme main</option>
+                <option value="3">Troisieme main</option>
+                <option value="+4">quatre ou plus</option>
+              </select>
+              <div className="flex justify-end ">
+                <img src="../../public/Addpic.png" className="w-10" alt="" />
+              </div>
+            </div>
+            <div className="flex justify-center mt-1">
+              <button type="submit" id="chercheBtn" className="px-2 py-1 w-40">
+                deposer
+              </button>
+            </div>
+          </form>
+          <div>
+            <img src="../../public/carPost.png" className="w-44" alt="" />
           </div>
-          <TextInput
-            id="name"
-            type="text"
-            placeholder="donner le nom de voiture"
-            required={true}
-          />
         </div>
-
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="selling_price" value="prix" />
-          </div>
-          <TextInput
-            id="selling_price"
-            type="text"
-            placeholder="tapez le prix"
-            required={true}
-          />
-        </div>
-
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="km-driven" value="kilometrage" />
-          </div>
-          <TextInput
-            id="km-driven"
-            type="number"
-            placeholder="taper le kilometrage"
-            required={true}
-          />
-        </div>
-
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="fuel" value="carburant" />
-          </div>
-          <TextInput
-            id="fuel"
-            type="text"
-            placeholder="type de carburant"
-            required={true}
-          />
-        </div>
-
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="year" value="Annee" />
-          </div>
-          <TextInput
-            id="year"
-            type="number"
-            placeholder="Annee de fabrication "
-            required={true}
-          />
-        </div>
-
-        <fieldset className="flex flex-col gap-4" id="radio">
-          <legend>Boite a vitesse</legend>
-          <br />
-          <div className="flex items-center gap-2">
-            <Radio
-              id="manuelle"
-              name="countries"
-              value="USA"
-              defaultChecked={true}
-            />
-            <Label htmlFor="manuelle">manuel</Label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Radio id="automatique" name="countries" value="Germany" />
-            <Label htmlFor="automatique">automatique</Label>
-          </div>
-          <div className="flex items-center gap-2"></div>
-        </fieldset>
-
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="mileage" value="mileage" />
-          </div>
-          <TextInput
-            id="mileage"
-            type="number"
-            placeholder=""
-            required={true}
-          />
-        </div>
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="engine" value="engine" />
-          </div>
-          <TextInput
-            id="engine"
-            type="number"
-            placeholder="tapez engine"
-            required={true}
-          />
-        </div>
-
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="max_power" value="puissance maximal" />
-          </div>
-          <TextInput
-            id="max_power"
-            type="numbre"
-            placeholder="50 bhp"
-            required={true}
-          />
-        </div>
-
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="seats" value="places" />
-          </div>
-          <TextInput
-            id="seats"
-            type="number"
-            placeholder="between 2 et 9"
-            required={true}
-          />
-        </div>
-
-        <fieldset className="flex flex-col gap-4" id="radio">
-          <legend>Owner</legend>
-          <br />
-          <div className="flex items-center gap-2">
-            <Radio
-              id="first_owner"
-              name="countries"
-              value="USA"
-              defaultChecked={true}
-            />
-            <Label htmlFor="first_owner">first_owner</Label>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Radio id="second-owner" name="countries" value="Germany" />
-            <Label htmlFor="second-owner">second-owner</Label>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Radio id="third-owner" name="countries" value="Germany" />
-            <Label htmlFor="third-owner">third-owner</Label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Radio id="forth & above owner" name="countries" value="Germany" />
-            <Label htmlFor="forth & above owner">forth & above owner</Label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Radio id="Test drive car" name="countries" value="Germany" />
-            <Label htmlFor="Test drive car">Test drive car</Label>
-          </div>
-          <div className="flex items-center gap-2"></div>
-        </fieldset>
-
-        <div className="flex items-center gap-2">
-          <Checkbox id="remember" />
-          <Label htmlFor="remember">Remember me</Label>
-        </div>
-        <Button type="submit">Submit</Button>
-      </form>
+      </div>
     </div>
   );
 };

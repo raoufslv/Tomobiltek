@@ -1,7 +1,34 @@
 import React from "react";
 import Navbar from "../components/Header/NavigationBar";
+import axios from "axios";
+import MyContext  from "../utils/MyContext";
+import { redirect } from "react-router-dom";
 
 const SignIn = () => {
+  
+  const { Connected, setConnected } = React.useContext(MyContext);
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [username, setUsername] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:5000/signin", {
+        email,
+        password,
+        username,
+      })
+      .then((res) => {
+        console.log(res);
+        setConnected(true);
+        redirect("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       <Navbar bgnavbar={true} />
@@ -18,10 +45,10 @@ const SignIn = () => {
             <input id="email" type="text" name="email" className="inputform h-9" placeholder="Email"></input>
           </div>
           <div className="flex justify-center">
-            <input type="password" className="inputform h-9"  placeholder="mot de passe" />
+            <input type="password" id="password" name="password" className="inputform h-9"  placeholder="mot de passe" />
           </div>
           <div className="flex justify-center">
-            <button type="submit" id="btnSubmitinsc" className="">Se connecter</button>
+            <button type="submit" name="submit" id="btnSubmitinsc" className="">Se connecter</button>
           </div>
           <div>
             <p className="text-center colorPrimary samlltexto">Vous n'avez pas de compte ? <a href="/Signup" className=" font-bold">créer un nouveau compte</a></p>

@@ -1,7 +1,34 @@
 import React from "react";
 import Navbar from "../components/Header/NavigationBar";
+import axios from "axios";
+import MyContext  from "../utils/MyContext";
+
 
 export default function SignUp() {
+
+  const { Connected, setConnected } = React.useContext(MyContext);
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [username, setUsername] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:5000/signup", {
+        email,
+        password,
+        username,
+      })
+      .then((res) => {
+        console.log(res);
+        setConnected(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+
   return (
     <div>
       <Navbar bgnavbar={true} />
@@ -12,13 +39,13 @@ export default function SignUp() {
         </div>
       </div>
       <div>
-        <form id="" action="" method="" className=" w-1/2 mx-auto border mt-5 shadowFormulair">
+        <form className=" w-1/2 mx-auto border mt-5 shadowFormulair">
           <h1 className="colorPrimary titleInsc text-center">Inscription</h1>
           <div className="flex justify-center">
             <input
-              id="nomComplet"
+              id="username"
               type="text"
-              name="nomComplet"
+              name="username"
               className="inputform h-9"
               placeholder="Nom d'utilisateur"
             ></input>
@@ -34,6 +61,8 @@ export default function SignUp() {
           </div>
           <div className="flex justify-center">
             <input
+              id="password"
+              name="password"
               type="password"
               className="inputform h-9"
               placeholder="mot de passe"

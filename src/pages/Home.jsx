@@ -19,7 +19,7 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center items-center w-1/2">
-            <img src="../../public/loto.svg" width={"2000px"} alt="loto" />
+            <img src="../../public/loto.png" width={"2000px"} alt="loto" />
           </div>
         </div>
       </div>
