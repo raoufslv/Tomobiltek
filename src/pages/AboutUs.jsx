@@ -4,7 +4,7 @@ import Navbar from "../components/Header/NavigationBar";
 const AboutUs = () => {
   return (
     <div>
-      <Navbar bgnavbar={true} />
+      <Navbar bgnavbar="bg-primary-purple" AboutUs={true} />
       <div className="my-20 widtha mx-auto shadow shadow-fuchsia-200 raduis px-10 py-10 border ">
         <h1 className=" text-center colorPrimary text-3xl mb-2">About us</h1>
         <div className="flex justify-between gap-8">

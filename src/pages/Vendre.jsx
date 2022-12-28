@@ -1,8 +1,4 @@
 import React from "react";
-import { Label } from "flowbite-react";
-import { TextInput } from "flowbite-react";
-import { Checkbox } from "flowbite-react";
-import { Button, Radio } from "flowbite-react";
 import Navbar from "../components/Header/NavigationBar";
 import { useNavigate } from "react-router-dom";
 import MyContext from "../utils/MyContext";
@@ -28,7 +24,7 @@ const Vendre = () => {
 
   return (
     <div>
-      <Navbar bgnavbar="true" />
+      <Navbar bgnavbar="bg-primary-purple" />
       <div className="flex justify-center">
         <div className="flex  mx-auto gap-10 shadow shadow-stone-800 raduis">
           <form className="p-4 pt-3">

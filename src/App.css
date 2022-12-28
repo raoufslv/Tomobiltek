@@ -10,7 +10,7 @@ input[type=number] {
 }
 
 .heighto{
-    height: 21rem;
+    height: 27.3rem;
 }
 
 #cradcar{
@@ -31,15 +31,13 @@ input[type=number] {
     border-bottom-right-radius: 2rem;
 }
 
-.heroSection{
-    padding-top: 60px;
-    margin-left: 40px;
-    padding-left: 20px;
-    padding-right: 60px;
-}
 
 .bg-primary-purple{
     background-color: #45195A;
+}
+
+.bg-puprle-secondary{
+    background-color: rgb(142, 43, 190);
 }
 
 #Khayer{
@@ -104,6 +102,19 @@ input[type=number] {
     
 }
 
+.active_line{
+    background: #fff;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-top: 0.2rem;
+    border-radius: 50%;
+}
+
+.item_navbar:hover .active_line{
+    background: #611F81;
+}
+
+
 .nice_line{
     background: #611F81;
     height: 0.2rem;
@@ -119,11 +130,75 @@ input[type=number] {
     font-weight: 600;
 }
 
-.heroTitle{
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
+
+.Hero_Pic{
+    animation: Hero_Pic 1.5s;
+}
+
+@keyframes Hero_Pic {
+    /*make it arrive from right to it's place*/
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+
+}
+
+.pHero{
+    animation: TitleFont 1.5s;
+    opacity: 0;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.buttonSlide{
+    animation: buttonSlide 1.5s;
+}
+
+@keyframes buttonSlide {
+    /*make it arrive from right to it's place*/
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+
+}
+
+.TitleFont{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: TitleFont 1.5s;
+}
+
+@keyframes TitleFont {
+    /*make it arrive from right to it's place*/
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+
+.FadeIn{
+    animation: FadeIn 1.5s;
+}
+
+@keyframes FadeIn {
+    /*fade in*/
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
 }
 
 .raduis{
@@ -145,7 +220,7 @@ input[type=number] {
 }
 
 .buttonStart{
-    background-color: #8E2BBE;
+    background-color: rgb(142, 43, 190);
     font-size: 1.2rem;
     margin: 40px;
     padding-left: 20px;
@@ -174,12 +249,6 @@ input[type=number] {
 
 .bg-lenear-purple{
     background: linear-gradient(180deg, #45195A 0%, #942DC7 100%);
-}
-
-.itemsbar{
-    margin-top: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 .itemsbar:hover{

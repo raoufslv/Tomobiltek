@@ -24,7 +24,7 @@ const Annonce = () => {
 
   return (
     <div>
-      <Navbar bgnavbar={true} />
+      <Navbar bgnavbar="bg-primary-purple" />
       <div className=" mx-10">
         <section className="mx-10">
           <div>

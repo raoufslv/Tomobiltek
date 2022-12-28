@@ -94,7 +94,7 @@ const Achat = () => {
 
   return (
     <div>
-      <Navbar bgnavbar={true} />
+      <Navbar bgnavbar="bg-primary-purple" OurCars={true} />
 
       {/* Bar de Recherche */}
       <section>

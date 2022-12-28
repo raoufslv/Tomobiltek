@@ -31,7 +31,7 @@ const SignIn = () => {
 
   return (
     <div>
-      <Navbar bgnavbar={true} />
+      <Navbar bgnavbar="bg-primary-purple" />
       <div className="flex content-center justify-center">
         <div className="flex flex-col items-center content-center">
           <p>Connectez-vous pour profiter de toutes les fonctionnalitées</p>
