@@ -3,6 +3,7 @@ import Navbar from "../components/Header/NavigationBar";
 import axios from "axios";
 import MyContext  from "../utils/MyContext";
 import { redirect } from "react-router-dom";
+import { api } from "../utils/api";
 
 const SignIn = () => {
   
@@ -13,7 +14,7 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
+    api
       .post("http://localhost:5000/signin", {
         email,
         password,
